@@ -124,7 +124,6 @@ newsSchema.pre("save", function (next) {
 
 // Add index for better performance
 newsSchema.index({ category: 1, publishedAt: -1 });
-newsSchema.index({ slug: 1 });
 newsSchema.index({ clubName: 1 });
 
 module.exports = mongoose.model("News", newsSchema);
